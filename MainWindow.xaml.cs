@@ -1003,7 +1003,7 @@ namespace PoEWizard
               select fileName.Substring(0, fileName.Length - 5) + ".xaml";
 
             List<string> sorted = resourceDicts.ToList();
-            if (sorted.Count < 2)
+            if (sorted.Count < 4)
             {
                 _langMenu.Visibility = Visibility.Collapsed;
                 return;
