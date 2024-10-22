@@ -448,7 +448,10 @@ Reboot duration: </sys:String>
     <sys:String x:Key="i18n_currPwd">Current Password</sys:String>
     <sys:String x:Key="i18n_newPwd">New Password</sys:String>
     <sys:String x:Key="i18n_cfmPwd">Confirm Password</sys:String>
-
+    <sys:String x:Key="i18n_invCpwd">Current Password provided is invalid</sys:String>
+    <sys:String x:Key="i18n_noMatch">Password confirmation does not match new password</sys:String>
+    <sys:String x:Key="i18n_emptyPwd">Password cannot be empty</sys:String>
+    
     <!--Tool Tips-->
     <sys:String x:Key="i18n_pwr_tt">Actual power consumed by the device connected to the port</sys:String>
     <sys:String x:Key="i18n_maxPwr_tt">Maximum power allowed by the hardware</sys:String>

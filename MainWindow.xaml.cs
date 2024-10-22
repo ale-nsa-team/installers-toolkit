@@ -742,7 +742,7 @@ namespace PoEWizard
             {
                 _slotsView.CellStyle = currentDict["gridCellNoHilite"] as Style;
             }
-            config.Set("theme", t);
+            config.Set("theme", Theme);
             SetTitleColor(this);
             //force color converters to run
             DataContext = null;

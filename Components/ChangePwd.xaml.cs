@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using PoEWizard.Data;
+using System.Windows;
 using System.Windows.Input;
 using static PoEWizard.Data.Constants;
 
@@ -47,9 +48,9 @@ namespace PoEWizard.Components
 
         private void BtnOk_Click(object sender, RoutedEventArgs e)
         {
-            if (CurrPwd != pwd) DisplayWarning("Current Password provided is invalid");
-            else if (NewPwd != CfrmPwd) DisplayWarning("Password confirmation does not match new password");
-            else if (string.IsNullOrWhiteSpace(NewPwd)) DisplayWarning("Password cannot be empty");
+            if (CurrPwd != pwd) DisplayWarning(Utils.Translate("i18n_invCpwd"));
+            else if (NewPwd != CfrmPwd) DisplayWarning(Utils.Translate("i18n_noMatch"));
+            else if (string.IsNullOrWhiteSpace(NewPwd)) DisplayWarning(Utils.Translate("i18n_emptyPwd"));
             else
             {
                 this.DialogResult = true;

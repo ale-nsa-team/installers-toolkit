@@ -449,6 +449,9 @@ Duração da reinicialização: </sys:String>
     <sys:String x:Key="i18n_currPwd">Senha Atual</sys:String>
     <sys:String x:Key="i18n_newPwd">Senha Nova</sys:String>
     <sys:String x:Key="i18n_cfmPwd">Confirme Senha Nova</sys:String>
+    <sys:String x:Key="i18n_invCpwd">Senha atual é inválida</sys:String>
+    <sys:String x:Key="i18n_noMatch">A confirmação da senha é diferente da nova senha</sys:String>
+    <sys:String x:Key="i18n_emptyPwd">A senha não pode ficar vazia</sys:String>
 
     <!--Tool Tips-->
     <sys:String x:Key="i18n_pwr_tt">Potência consumida pelo dispositivo connectado à porta</sys:String>
