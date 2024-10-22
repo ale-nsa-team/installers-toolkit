@@ -14,7 +14,7 @@ namespace PoEWizard.Components
     {
         public string SavedPassword;
         public string Password { get; set; }
-        private Config cfg;
+        private readonly Config cfg;
         
         public PassCode(Window owner, Config config)
         {

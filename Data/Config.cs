@@ -84,7 +84,7 @@ namespace PoEWizard.Data
             }
             finally
             {
-                if (file != null) file.Close();
+                file?.Close();
             }
         }
 
@@ -145,18 +145,13 @@ namespace PoEWizard.Data
             }
             foreach (string line in lines)
             {
-                if (!string.IsNullOrEmpty(line) &&
-                    !line.StartsWith(";") &&
-                    !line.StartsWith("#") &&
-                    !line.StartsWith("'") &&
-                    line.Contains('='))
+                if (!string.IsNullOrEmpty(line) && !line.StartsWith(";") && !line.StartsWith("#") && !line.StartsWith("'") && line.Contains('='))
                 {
                     int index = line.IndexOf('=');
                     string key = line.Substring(0, index).Trim();
                     string value = line.Substring(index + 1).Trim();
 
-                    if ((value.StartsWith("\"") && value.EndsWith("\"")) ||
-                        (value.StartsWith("'") && value.EndsWith("'")))
+                    if ((value.StartsWith("\"") && value.EndsWith("\"")) || (value.StartsWith("'") && value.EndsWith("'")))
                     {
                         value = value.Substring(1, value.Length - 2);
                     }

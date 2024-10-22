@@ -1,5 +1,4 @@
-﻿using PoEWizard.Data;
-using PoEWizard.Device;
+﻿using PoEWizard.Device;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

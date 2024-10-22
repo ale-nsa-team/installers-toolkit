@@ -426,8 +426,7 @@ Deseja salvar agora?
 A operação de escrita pode durar cerca de 30 segundos
     </sys:String>
     <sys:String x:Key="i18n_swrst">Reiniciando o switch</sys:String>
-    <sys:String x:Key="i18n_swready" xml:space="preserve">
-Pronto para conectar.
+    <sys:String x:Key="i18n_swready" xml:space="preserve">pronto para conectar.
 Duração da reinicialização: </sys:String>
     <sys:String x:Key="i18n_rst">reiniciada</sys:String>
     <sys:String x:Key="i18n_pfrst">não foi possível reiniciar</sys:String>

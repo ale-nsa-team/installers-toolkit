@@ -260,9 +260,15 @@ namespace PoEWizard.Comm
             }
             catch (Exception ex)
             {
-                Logger.Error(ex);
-                if (ex.InnerException is HttpRequestException) throw new SwitchConnectionFailure($"Switch {this._ip_address} connection failure!");
-                else throw ex;
+                if (ex.InnerException is HttpRequestException)
+                {
+                    throw new SwitchConnectionFailure($"Switch {this._ip_address} connection failure!");
+                }
+                else
+                {
+                    Logger.Error(ex);
+                    throw ex;
+                }
             }
             return response;
         }

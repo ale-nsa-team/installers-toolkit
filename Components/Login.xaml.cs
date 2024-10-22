@@ -15,10 +15,9 @@ namespace PoEWizard.Components
     /// </summary>
     public partial class Login : Window
     {
-        private const int MAX_LIST_SIZE = 20;
         private readonly ImageSource eye_open;
         private readonly ImageSource eye_closed;
-        private Config cfg;
+        private readonly Config cfg;
 
         public string IpAddress { get; set; }
         public List<string> IpList { get; set; }

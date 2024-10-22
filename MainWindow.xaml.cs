@@ -3,6 +3,7 @@ using PoEWizard.Comm;
 using PoEWizard.Components;
 using PoEWizard.Data;
 using PoEWizard.Device;
+using PoEWizard.Exceptions;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -1135,8 +1136,8 @@ namespace PoEWizard
             try
             {
                 if (restApiService == null || isClosing) return;
-                string cfgChanges = await GetSyncStatus(title);
                 isClosing = true;
+                string cfgChanges = await GetSyncStatus(title);
                 if (device?.RunningDir != CERTIFIED_DIR && device?.SyncStatus == SyncStatusType.NotSynchronized)
                 {
                     if (AuthorizeWriteMemory(Translate("i18n_wmem"), cfgChanges))
@@ -1147,15 +1148,15 @@ namespace PoEWizard
                         _comImg.Visibility = Visibility.Visible;
                     }
                 }
-                restApiService?.Close();
-                restApiService = null;
             }
             catch (Exception ex)
             {
-                Logger.Error(ex);
+                if (ex is SwitchConnectionFailure) Logger.Warn(ex.Message); else Logger.Error(ex);
             }
             finally
             {
+                restApiService?.Close();
+                restApiService = null;
                 HideProgress();
                 HideInfoBox();
             }

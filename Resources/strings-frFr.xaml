@@ -425,8 +425,7 @@ Do you want to save it now?
 It may take up to 30 sec to execute Write Memory
     </sys:String>
     <sys:String x:Key="i18n_swrst">Rebooting switch</sys:String>
-    <sys:String x:Key="i18n_swready" xml:space="preserve">
-ready to connect
+    <sys:String x:Key="i18n_swready" xml:space="preserve">ready to connect
 Reboot duration: </sys:String>
     <sys:String x:Key="i18n_rst">restarted</sys:String>
     <sys:String x:Key="i18n_pfrst">failed to restart</sys:String>

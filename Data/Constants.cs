@@ -99,6 +99,9 @@ namespace PoEWizard.Data
         #endregion
 
         #region strings
+        // Used by Password Code
+        public const string DEFAULT_PASS_CODE = "@AleT00lkit#";
+        // General constants
         public static readonly List<string> timezones = new List<string>()
         {
             "EST", "CST", "PST", "MST", "AKST", "AST", "HST", "UTC", "GMT", "CET", "NST"
@@ -311,7 +314,6 @@ namespace PoEWizard.Data
         // Used by BuildOuiTable method of MainWindow.xaml.cs class
         public const string OUI_FILE = "oui.csv";
         // Used by Config Wizard
-        public const string DEFAULT_PASS_CODE = "@AleT00lkit#";
         public const string IP_ADDR = "IP Address";
         public const string SUBNET_MASK = "Subnet Mask";
         public const string DEVICE = "Device";
@@ -350,6 +352,8 @@ namespace PoEWizard.Data
         public const string MASTER = "Master";
         public const string SLAVE = "Slave";
         public const string MAC_MATCH_MARK = " (*)";
+        // Application config file
+        public const string APP_CFG_FILENAME = "app.cfg";
         #endregion
 
         #region regex patterns
@@ -389,6 +393,10 @@ namespace PoEWizard.Data
         public const int MAX_NB_SNAPSHOT_SAVED = 500;
         public const int MAX_NB_SNAPSHOT_DAYS = 30;
         public const int MAX_NB_LINES_CHANGES_DISPLAYED = 20;
+        #endregion
+
+        #region Login Credentials Limits
+        public const int MAX_LIST_SIZE = 20;
         #endregion
     }
 }
